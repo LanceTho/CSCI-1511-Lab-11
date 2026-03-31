@@ -32,3 +32,8 @@ def test_adjust_rotation_negative() -> None:
     assert adjust_rotation(-820) == 260
 
 #TypeError test case
+def test_adjust_rotation_with_string() -> None:
+    with pytest.raises(TypeError):
+        assert adjust_rotation('100') is None
+        assert adjust_rotation('460') is None
+        assert adjust_rotation('820') is None
