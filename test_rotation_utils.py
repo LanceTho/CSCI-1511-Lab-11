@@ -20,11 +20,15 @@ Non-Numeric Input: You must write a test that uses pytest.raises(TypeError) to v
 """
 
 # positive test case
-def test_adjust_rotation_positive_int() -> None:
+def test_adjust_rotation_positive() -> None:
     assert adjust_rotation(100) == 100
     assert adjust_rotation(460) == 100
     assert adjust_rotation(820) == 100
 
 #negative test cases
+def test_adjust_rotation_negative() -> None:
+    assert adjust_rotation(-100) == 260
+    assert adjust_rotation(-460) == 260
+    assert adjust_rotation(-820) == 260
 
 #TypeError test case
