@@ -19,9 +19,11 @@ Input: -820 -> Expected Output: 260
 Non-Numeric Input: You must write a test that uses pytest.raises(TypeError) to verify the function correctly raises a TypeError when given a string (e.g., "abc").
 """
 
-#positive test cases
-def test_adjust_rotation_positive() -> None:
+# positive test case
+def test_adjust_rotation_positive_int() -> None:
     assert adjust_rotation(100) == 100
+    assert adjust_rotation(460) == 100
+    assert adjust_rotation(820) == 100
 
 #negative test cases
 
